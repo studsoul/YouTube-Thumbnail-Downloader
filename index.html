@@ -5,9 +5,85 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>YouTube Thumbnail Downloader</title>
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdn.lordicon.com/libs/mssddfmo/lord-icon-2.1.0.js"></script>
+  <script src="app.js"></script>
 </head>
 <body>
-  <h1>YouTube Thumbnail Downloader</h1>
-  <input placeholder="Enter YouTube Video Link"/>
+  <!-- <h1>YouTube Thumbnail Downloader</h1>
+  <input placeholder="Enter YouTube Video Link"/> -->
+  <header class="text-gray-600 body-font">
+    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+      <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+        <!-- <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-red-500 rounded-full" viewBox="0 0 24 24">
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+        </svg> -->
+        <lord-icon
+    src="https://cdn.lordicon.com/hrqwmuhr.json"
+    trigger="loop"
+    colors="primary:#121331,secondary:#ee6d66"
+    style="width:90px;height:80px">
+</lord-icon>
+        <span class="ml-3 text-xl">Thumb<span class="text-red-400">Down</span></span>
+      </a>
+      <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
+        
+      </nav>
+      
+    </div>
+  </header>
+  <section class="text-gray-600 body-font">
+    <div class="container mx-auto flex flex-col px-4 py-6 justify-center items-center">
+      <img class="lg:w-1/5 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded" alt="hero" src="./thumb.svg">
+      <div class="w-full md:w-2/3 flex flex-col mb-16 items-center text-center">
+        <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">YouTube Thumbnail Downloader</h1>
+        <!-- <p class="mb-8 leading-relaxed">Kickstarter biodiesel roof party wayfarers cold-pressed. Palo santo live-edge tumeric scenester copper mug flexitarian. Prism vice offal plaid everyday carry. Gluten-free chia VHS squid listicle artisan.</p> -->
+        <div class="flex w-full justify-center items-end">
+          <div class="relative mr-4 lg:w-full xl:w-1/2 w-2/4 md:w-full text-left">
+            <label for="hero-field" class=" leading-7 text-sm text-gray-600"></label>
+            <input type="text" id="hero-field" name="hero-field" class="rounded-lg w-full bg-gray-100 bg-opacity-50 rounded focus:ring-2 focus:ring-red-200 focus:bg-transparent border border-gray-300 focus:border-red-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out placeholder-gray-500 ..." placeholder="Paste Your YouTube Link"">
+          </div>
+          <button class="rounded-lg inline-flex text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded text-lg" onclick="thumbdown()">Download</button>
+        </div>
+        <p class="text-sm mt-2 text-gray-500 mb-8 w-full"></p>
+        <div class="flex" id="downSection" style="display:none;">
+          <a href="" id="lowres" target="_blank" download><button class="bg-red-300 inline-flex mx-4 py-3 px-5 rounded-lg items-center hover:bg-red-200 focus:outline-none">
+            
+            <span class="ml-4 flex items-start flex-col leading-none">
+           
+              <span class="title-font font-medium">Low Quality</span>
+              
+            </span>
+          </button></a>
+          <a href="" id="midres" target="_blank" download><button class="bg-red-300 inline-flex mx-4 py-3 px-5 rounded-lg items-center hover:bg-red-200 focus:outline-none">
+            
+            <span class="ml-4 flex items-start flex-col leading-none">
+           
+              <span class="title-font font-medium ">Medium Quality</span>
+              
+            </span>
+          </button>
+          <a href="" id="hires" target="_blank" download><button class="bg-red-300 inline-flex mx-4 py-3 px-5 rounded-lg items-center hover:bg-red-200 focus:outline-none">
+            
+            <span class="ml-4 flex items-start flex-col leading-none">
+           
+              <span class="title-font font-medium">High Quality</span>
+              
+            </span>
+          </button>
+          <a href="" id="maxres" target="_blank" download><button class="bg-red-300 inline-flex mx-4 py-3 px-5 rounded-lg items-center hover:bg-red-200 focus:outline-none">
+            
+            <span class="ml-2 flex items-start flex-col leading-none">
+           
+              <span class="title-font font-medium">Max Quality</span>
+              
+            </span>
+          </button></a>
+
+          
+        </div>
+      </div>
+    </div>
+  </section>
 </body>
 </html>
